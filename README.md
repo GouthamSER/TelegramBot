@@ -2,7 +2,7 @@
   <img src="https://telegra.ph/file/8f6deb9d7fa796289a19b.jpg" alt="Elsa">
 </p>
 <h1 align="center">
-  <b>Elsa</b>
+  <b>Doctor-Strange</b>
 </h1>
 
 <a href="https://t.me/cinemala_com1">
