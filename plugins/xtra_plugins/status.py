@@ -1,6 +1,6 @@
 #Made By @Don_Sflix
 
-import os
+import o
 import math
 import time
 import heroku3
