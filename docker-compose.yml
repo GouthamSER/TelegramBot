@@ -3,7 +3,7 @@ services:
    worker:
     build: .
     environment:
-      BOT_TOKEN: $BOT_TOKE
+      BOT_TOKEN: $BOT_TOKEN
       API_ID: $API_ID
       API_HASH: $API_HASH
       CHANNELS: $CHANNELS
