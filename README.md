@@ -5,16 +5,16 @@
   <b>Doctor-Strange</b>
 </h1>
 
-<a href="https://t.me/cinemala_com1">
+<a href="https://t.me/czdbotz_support">
   <img src="https://img.shields.io/badge/Join-blue?logo=telegram" width="70">
 
-[![Stars](https://img.shields.io/github/stars/Devil-Botz/Elsa?style=flat-square&color=yellow)](https://github.com/Devil-Botz/Elsa/stargazers)
-[![Forks](https://img.shields.io/github/forks/Devil-Botz/Elsa?style=flat-square&color=orange)](https://github.com/Devil-Botz/Elsa/fork)
-[![Size](https://img.shields.io/github/repo-size/Devil-Botz/Elsa?style=flat-square&color=green)](https://github.com/Devil-Botz/Elsa)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Devil-Botz/Elsa)   
-[![Contributors](https://img.shields.io/github/contributors/Devil-Botz/Elsa?style=flat-square&color=green)](https://github.com/Devil-Botz/Elsa/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/Devil-Botz/Elsa/blob/main/LICENSE)
-[![Sparkline](https://stars.medv.io/Devil-Botz/Elsa.svg)](https://stars.medv.io/Devil-Botz/Elsa)
+[![Stars](https://img.shields.io/github/stars/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=yellow)](https://github.com/CrazyDeveloperTG/Doctor-Strange/stargazers)
+[![Forks](https://img.shields.io/github/forks/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=orange)](https://github.com/CrazyDeveloperTG/Doctor-Strange/fork)
+[![Size](https://img.shields.io/github/repo-size/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=green)](https://github.com/CrazyDeveloperTG/Doctor-Strange)   
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/CrazyDeveloperTG/Doctor-Strange)   
+[![Contributors](https://img.shields.io/github/contributors/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=green)](https://github.com/CrazyDeveloperTG/Doctor-Strange/graphs/contributors)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/CrazyDeveloperTG/Doctor-Strange/blob/main/LICENSE)
+[![Sparkline](https://stars.medv.io/CrazyDeveloperTG/Doctor-Strange.svg)](https://stars.medv.io/CrazyDeveloperTG/Doctor-Strange)
 ## Features
 
 - [x] Auto Filter
