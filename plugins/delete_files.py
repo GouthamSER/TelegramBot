@@ -1,4 +1,4 @@
-#https://github.com/Joelkb/DQ-the-file-donor
+#https://github.com/CrazyDeveloperTG/Doctor-Strange
 
 import re
 import logging
