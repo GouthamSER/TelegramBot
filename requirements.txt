@@ -36,4 +36,3 @@ python-math
 Pillow
 speedtest-cli
 
-
