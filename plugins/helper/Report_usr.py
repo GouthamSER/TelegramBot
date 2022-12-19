@@ -1,4 +1,4 @@
-import pyrogram
+import pyrogra
 import asyncio
 import os
 from pyrogram import filters, enums, Client as Sflix
