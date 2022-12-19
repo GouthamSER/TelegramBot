@@ -1,4 +1,4 @@
-import pymongo
+import pymong
 from pyrogram import enums
 from info import DATABASE_URI, DATABASE_NAME
 import logging
