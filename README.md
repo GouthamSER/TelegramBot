@@ -5,6 +5,9 @@
   <b>Doctor-Strange</b>
 </h1>
 
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+DQ-The-File-Donor!;Created+by+Jᴏᴇʟ+ᠰ+TɢX!;A+simple+and+powerful+Bot!;Indexes+Files+above+2GB;A+Bot+with+double+button!;Start+message+with+pic!;And+more+features!)
+</p>
+
 <a href="https://t.me/czdbotz_support">
   <img src="https://img.shields.io/badge/Join-blue?logo=telegram" width="70">
 
