@@ -33,7 +33,7 @@
 - [x] Stats, Users, Chats
 - [x] Spelling Check Feature
 - [x] File Store
-- [x] 📂 PM & Channel 
+- [x] PM & Channel 
 - [x] Auto delete
 - [x] 2GB+File Support
 - [x] song video download
@@ -59,7 +59,7 @@
 * `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com).
 * `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com). For more help watch this 
 * `LOG_CHANNEL` : A channel to log the activities of bot. Make sure bot is an admin in the channel.
-* `SUPPORT_CHAT` : @Elsasupportgp
+* `SUPPORT_CHAT` : @czdbotz_support
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used seperated by space )
 * `FILE_CHANNEL` : File redirect to channel
 * `DELETE_CHANNELS` : you can delete multiple files by forwarding those files into a private channel. Firstly make a private channel, add your bot as admin, add that channel's ID as a variable named DELETE_CHANNELS and forward the files to that private channel and the bot will delete those files from its database. You can check logs to confirm whether the file is deleted from the bot's database or not.
@@ -92,7 +92,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Koyeb</summary>
 <br>
 <p>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/CrazyDeveloperTG/Doctor-Strange&env[BOT_TOKEN]&env[API_ID]&env[API_HASH]&env[CHANNELS]&env[ADMINS]&env[PICS]&env[LOG_CHANNEL]&env[AUTH_CHANNEL]&env[CUSTOM_FILE_CAPTION]&env[DATABASE_URI]&env[DATABASE_NAME]&env[COLLECTION_NAME]=Telegram_files&env[SUPPORT_CHAT]&env[IMDB]=True&env[IMDB_TEMPLATE]&env[SINGLE_BUTTON]=True&env[AUTH_GROUPS]&env[P_TTI_SHOW_OFF]=True&run_command=python%20bot.py&branch=main&name=Elsa">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/CrazyDeveloperTG/Doctor-Strange&env[BOT_TOKEN]&env[API_ID]&env[API_HASH]&env[CHANNELS]&env[ADMINS]&env[PICS]&env[LOG_CHANNEL]&env[AUTH_CHANNEL]&env[CUSTOM_FILE_CAPTION]&env[DATABASE_URI]&env[DATABASE_NAME]&env[COLLECTION_NAME]=Telegram_files&env[FILE_CHANNEL]=-1001832732995&env[SUPPORT_CHAT]&env[IMDB]=True&env[IMDB_TEMPLATE]&env[SINGLE_BUTTON]=True&env[AUTH_GROUPS]&env[P_TTI_SHOW_OFF]=True&run_command=python%20bot.py&branch=main&name=doctor-strainge">
  <img src="https://www.koyeb.com/static/images/deploy/button.svg">
 </p>
 </details>
