@@ -145,4 +145,4 @@ async def delallgfill(client, message):
 @Client.on_callback_query(filters.regex("gconforme"))
 async def dellacbd(client, message):
     await del_allg(message.message, 'gfilters')
-    return await message.reply("👍 Done")
+    return await message.reply("👍 Done"
