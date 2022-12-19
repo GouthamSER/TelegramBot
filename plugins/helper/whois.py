@@ -1,5 +1,5 @@
 
-"""Get info about the replied use
+"""Get info about the replied user
 Syntax: .whois"""
 
 import os
