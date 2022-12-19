@@ -141,7 +141,14 @@ python3 bot.py
 ```
 <b> 😇CREATOR » [AFSAL](https://t.me/AFxSU)</b>
 
-## Disclaimer
-[![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
-Licensed under [GNU AGPL 2.0.](https://github.com/Devil-Botz/Elsa-V3/blob/main/LICENSE)
-Selling The Codes To Other People For Money Is *Strictly Prohibited*.
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=CrazyDeveloperTG&theme=highcontrast" align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com?user=CrazyDeveloperTG&theme=tokyonight" align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CrazyDeveloperTG&layout=compact&theme=tokyonight" align="center">
+    <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="20" height="20"/> </a>
+    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="20" height="20"/> </a>
+    <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="20" height="20"/> </a>
+    <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="20" height="20"/> </a> 
+    <a href="https://golang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="Go" width="20px" height="20" /></a>
+    <a href="https://www.w3schools.com/js/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="20px" height="20" /></a>
+</p>
