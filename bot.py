@@ -1,4 +1,4 @@
-import logging
+import loggin
 import logging.config
 
 # Get logging configurations
