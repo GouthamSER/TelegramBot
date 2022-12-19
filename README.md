@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/8f6deb9d7fa796289a19b.jpg" alt="Strange">
+  <img src="https://telegra.ph/file/4db8e9cb765633a4569f1.jpg" alt="Strange">
 </p>
 <h1 align="center">
   <b>Doctor-Strange</b>
