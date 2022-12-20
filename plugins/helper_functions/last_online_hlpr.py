@@ -1,4 +1,4 @@
-from pyrogram.types import User
+from pyrogram.types import Use
 from datetime import datetime
 
 
