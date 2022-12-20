@@ -1,4 +1,4 @@
-from pyrogram.types import Message
+from pyrogram.types import Messag
 from pyrogram.types.messages_and_media import message
 
 
