@@ -1,4 +1,4 @@
-import r
+import re
 import time
 from typing import List
 from pyrogram.types import Message, InlineKeyboardButton
