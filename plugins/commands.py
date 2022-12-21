@@ -50,7 +50,7 @@ async def start(client, message):
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
          ],[
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/bots_supported')
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/czdbotz_support')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAEG3GpjnZGMxfLrOF6BUUSxygU9tU0YzwACxwkAAhxu6VRvyqQ4Rs9jLCwE") 
@@ -101,7 +101,7 @@ async def start(client, message):
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
          ],[
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/bots_supported')
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/czdbotz_support')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
