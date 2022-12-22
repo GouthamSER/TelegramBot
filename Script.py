@@ -244,7 +244,6 @@ Added By - {}
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
-𝙲𝚉𝙳 𝙱𝙾𝚃𝚉
 """
     FILE_MSG = """
 <b>Hai 👋 {} </b>😍
@@ -290,8 +289,8 @@ Name - {}
     CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}
 
 ╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
-▫️<a href=https://t.me/at3movies> ᴍᴏᴠɪᴇ ʜᴜʙ </a>
-▫️<a href=https://t.me/Colours_Movies> ʀᴇǫᴜᴇsᴛ ᴍᴏᴠɪᴇs​ </a>
+▫️<a href=https://t.me/wudixh> ᴍᴏᴠɪᴇ ʜᴜʙ </a>
+▫️<a href=https://t.me/wudixh1> Kuttu Bot Update </a>
 ╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</b>""" 
 
     RESTART_TXT = """
@@ -302,7 +301,7 @@ Name - {}
 
     MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
 
-    ALRT_TXT = """𝚃𝙷𝙰𝚃 𝙸𝚂 𝙽𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄 𝚂𝙸𝚁 @ᴄᴢᴅ ʙᴏᴛᴢ​"""
+    ALRT_TXT = """𝚃𝙷𝙰𝚃 𝙸𝚂 𝙽𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄 𝚂𝙸𝚁"""
 
     OLD_ALRT_TXT = """𝐘𝐨𝐮 𝐚𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐨𝐧𝐞 𝐨𝐟 𝐦𝐲 𝐨𝐥𝐝 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬, 𝐩𝐥𝐞𝐚𝐬𝐞 𝐬𝐞𝐧𝐝 𝐭𝐡𝐞 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 𝐚𝐠𝐚𝐢𝐧 @im_kuttu_bot"""
 
@@ -314,7 +313,7 @@ Name - {}
 𝗜𝗗 <b>: {}</b>
 𝗡𝗮𝗺𝗲 <b>: {}</b>
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>
-©𝙲𝚉𝙳 𝙱𝙾𝚃𝚉"""
+"""
 
     I_CUDNT = """𝑯𝑬𝑳𝑳𝑶 {} 𝑰 𝑪𝑶𝑼𝑳𝑫𝑵'𝑻 𝑭𝑰𝑵𝑫 𝑨𝑵𝒀 𝑴𝑶𝑽𝑰𝑬 𝑰𝑵 𝑻𝑯𝑨𝑻 𝑵𝑨𝑴𝑬 ."""
 
