@@ -1,22 +1,24 @@
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Doctor-Strange!;Created+by+𝐂𝐫𝐚𝐳𝐲𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫ᠰ𝐓𝐆!;A+simple+and+powerful+Bot!;Indexes+Files+above+2GB;A+Bot+with+double+button!;Start+message+with+pic!;And+more+features!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+kuTTu-boT!;Created+by+GouthamSER!;A+simple+and+powerful+Bot!;Indexes+Files+above+2GB;A+Bot+with+double+button!;Start+message+with+pic!;And+more+features!)
 </p>
 <p align="center">
-  <img src="https://telegra.ph/file/8f6deb9d7fa796289a19b.jpg" alt="Strange">
+  <img src="logo.jpg" alt="kuTTu">
 </p>
 <h1 align="center">
-  <b>Doctor-Strange</b>
+  <b>kuTTu boT</b>
 </h1>
 
-<a href="https://t.me/czdbotz_support">
+<a href="https://t.me/wudixh1">
   <img src="https://img.shields.io/badge/Join-blue?logo=telegram" width="70">
+ 
+ 
 
-[![Stars](https://img.shields.io/github/stars/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=yellow)](https://github.com/CrazyDeveloperTG/Doctor-Strange/stargazers)
-[![Forks](https://img.shields.io/github/forks/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=orange)](https://github.com/CrazyDeveloperTG/Doctor-Strange/fork)
-[![Size](https://img.shields.io/github/repo-size/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=green)](https://github.com/CrazyDeveloperTG/Doctor-Strange)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/CrazyDeveloperTG/Doctor-Strange)   
-[![Contributors](https://img.shields.io/github/contributors/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=green)](https://github.com/CrazyDeveloperTG/Doctor-Strange/graphs/contributors)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/CrazyDeveloperTG/Doctor-Strange/blob/main/LICENSE)
-[![Sparkline](https://stars.medv.io/CrazyDeveloperTG/Doctor-Strange.svg)](https://stars.medv.io/CrazyDeveloperTG/Doctor-Strange)
+[![Stars](https://img.shields.io/github/stars/GouthamSER/TelegramBot?style=flat-square&color=yellow)](https://github.com/GouthamSER/TelegramBot/stargazers)
+[![Forks](https://img.shields.io/github/forks/GouthamSER/TelegramBot?style=flat-square&color=orange)](https://github.com/GouthamSER/TelegramBot/fork)
+[![Size](https://img.shields.io/github/repo-size/GouthamSER/TelegramBot?style=flat-square&color=green)](https://github.com/GouthamSER/TelegramBot)   
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/GouthamSER/TelegramBot)   
+[![Contributors](https://img.shields.io/github/contributors/CrazyDeveloperTG/Doctor-Strange?style=flat-square&color=green)](https://github.com/GouthamSER/TelegramBot/graphs/contributors)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/GouthamSER/TelegramBot/blob/main/LICENSE)
+[![Sparkline](https://stars.medv.io/GouthamSER/TelegramBot.svg)](https://stars.medv.io/GouthamSER/TelegramBot)
 ## Features
 
 - [x] Auto Filter
@@ -83,7 +85,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/CrazyDeveloperTG/Doctor-Strange">
+<a href="https://heroku.com/deploy?template=https://github.com/GouthamSER/TelegramBot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p></details>
@@ -98,7 +100,7 @@ You can deploy this bot anywhere.
 <details><summary> Deploy To Okteto </summary>
 <br>
 <p>
-<a href="https://cloud.okteto.com/deploy?repository=https://github.com/CrazyDeveloperTG/Doctor-Strange&branch=main">
+<a href="https://cloud.okteto.com/deploy?repository=https://github.com/GouthamSER/TelegramBot&branch=main">
   <img src="https://okteto.com/develop-okteto.svg" alt="Develop on Okteto">
 </a>
 </p>
@@ -106,7 +108,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/CrazyDeveloperTG/Doctor-Strange
+git clone https://github.com/GouthamSER/TelegramBot
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
