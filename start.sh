@@ -4,7 +4,7 @@ then
   git clone https://github.com/GouthamSER/TelegramBot /TelegramBot
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Doctor-Strange
+  git clone $UPSTREAM_REPO /TelegramBot
 fi
 cd /TelegramBot
 pip3 install -U -r requirements.txt
