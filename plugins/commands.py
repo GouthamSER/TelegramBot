@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url=(MAIN_CHANNEL))
+                InlineKeyboardButton('🤖 𝚄𝚙𝚍𝚊𝚝𝚎𝚜', url=(MAIN_CHANNEL))
             ],
             [
-                InlineKeyboardButton('ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('𝙷𝚎𝚕𝚙', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -42,17 +42,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗥𝗢𝗨𝗣💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('𝗠𝗼𝘃𝗶𝗲 𝗚𝗿𝗼𝘂𝗽', url='https://t.me/wudixh'),
-            InlineKeyboardButton('𝗢𝘄𝗻𝗲𝗿👤', url='https://t.me/im_goutham_josh')
+            InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝙶𝚛𝚘𝚞𝚙🎥', url='https://t.me/wudixh'),
+            InlineKeyboardButton('𝙾𝚠𝚗𝚎𝚛👤', url='https://t.me/im_goutham_josh')
             ],[      
-            InlineKeyboardButton('𝗛𝗲𝗹𝗽🔧', callback_data='help'),
-            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁🖥', callback_data='about')
+            InlineKeyboardButton('𝙷𝚎𝚕𝚙🔧', callback_data='help'),
+            InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝🖥', callback_data='about')
             ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIuc2OxMvp4oKa3eqg6zBTCZZdtxFV3AAIvAAPhAAEBGxa4Kik7WjyMHgQ") 
-        await asyncio.sleep(2)
+        await asyncio.sleep(1)
         await m.delete()        
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -70,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🤖 𝙹𝚘𝚒𝚗 𝚄𝚙𝚍𝚊𝚝𝚎𝚜 𝙲𝚑𝚊𝚗𝚗𝚎𝚕💥", url=invite_link.invite_link
                 )
             ]
         ]
@@ -91,13 +91,13 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗥𝗢𝗨𝗣💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('𝗠𝗼𝘃𝗶𝗲 𝗚𝗿𝗼𝘂𝗽', url='https://t.me/wudixh'),
-            InlineKeyboardButton('𝗢𝘄𝗻𝗲𝗿👤', url='https://t.me/im_goutham_josh')
+            InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝙶𝚛𝚘𝚞𝚙🎥', url='https://t.me/wudixh'),
+            InlineKeyboardButton('𝙾𝚠𝚗𝚎𝚛👤', url='https://t.me/im_goutham_josh')
             ],[      
-            InlineKeyboardButton('𝗛𝗲𝗹𝗽🔧', callback_data='help'),
-            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁🖥', callback_data='about')
+            InlineKeyboardButton('𝙷𝚎𝚕𝚙🔧', callback_data='help'),
+            InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝🖥', callback_data='about')
             ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
