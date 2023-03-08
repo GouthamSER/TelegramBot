@@ -599,11 +599,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(MSG_ALRT)
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('📈ᴍᴀɴᴜᴀʟ', callback_data='manuelfilter'),
-            InlineKeyboardButton('📊ᴀᴜᴛᴏ', callback_data='autofilter'),
-            InlineKeyboardButton('🎛ᴄᴏɴɴᴇᴄᴛ', callback_data='coct')
+            InlineKeyboardButton('📈Manual Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('📊Auto Filter', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start')      
+            InlineKeyboardButton('⚙️Connection', callback_data='coct'),
+            InlineKeyboardButton('🖇️Extra Mods', callback_data='extra')
+        ], [
+            InlineKeyboardButton('🏠 Home', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(                     
@@ -667,6 +669,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "extra":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='help'),
+            InlineKeyboardButton('ᴀᴅᴍɪɴ', callback_data='admin')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.EXTRAMOD_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "admin":
+        buttons = [[
+            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='extra')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ADMIN_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
     elif query.data == "coct":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='help')
