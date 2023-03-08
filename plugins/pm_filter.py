@@ -689,6 +689,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.ADMIN_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "coct":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='help')
