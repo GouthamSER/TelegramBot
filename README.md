@@ -37,15 +37,7 @@
 - [x] PM & Channel 
 - [x] Auto delete
 - [x] 2GB+File Support
-- [x] song video download
 - [x] gfilter
-- [x] group broadcast
-- [x] telegraph
-- [x] games
-- [x] ping
-- [x] pdf convert to voice
-- [x] font
-- [x] translate
 - [x] PreDVD and CamRip Delete Mode
 - [x] Multiple File Deletion
 
