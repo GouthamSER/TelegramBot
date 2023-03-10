@@ -49,7 +49,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/d8b82d0a1d20da5f0cf65.jpg https://telegra.ph/file/ac56302ae11da42519c1d.jpg https://telegra.ph/file/43c7e4d3c2e327bd9b02e.jpg https://telegra.ph/file/77283bdd7509ba368a43f.jpg https://telegra.ph/file/1157e9c4f1ab715996334.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/329bd4dae3fb88fa8aa30.jpg")
+NOR_IMG = environ.get('NOR_IMG', "")
 SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/80dcffebb47e116a65758.jpg")
 
 # Welcome area
@@ -68,9 +68,6 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
-# This is required for the plugins involving the file system.
-TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-
 # Command
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
@@ -80,17 +77,15 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "doctorstrange")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MONGO_URL = os.environ.get('MONGO_URL', "")
 
-#Downloader
-DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 PORT = os.environ.get("PORT", "8080")
-MAX_BTN = int(environ.get('MAX_BTN', "7"))
+MAX_BTN = int(environ.get('MAX_BTN', "8"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/wudixh1")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/wudixh")
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/wudixh2")
-MSG_ALRT = environ.get('MSG_ALRT', '𝑇ℎ𝑎𝑛𝑘𝑠 𝑇𝑜 Goutham SER 💖')
+MSG_ALRT = environ.get('MSG_ALRT', '𝙺𝚞𝚝𝚝𝚞 𝙱𝚘𝚝 ❣️')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'wudixh1')
