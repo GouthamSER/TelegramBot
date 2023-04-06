@@ -9,3 +9,5 @@ bs4
 git+https://github.com/GouthamSER/cinemagoer
 aiohttp==3.7.4
 git+https://github.com/pyrogram/pyrogram
+datetime
+pytz
