@@ -784,20 +784,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
 async def auto_filter(client, msg, spoll=False):
     reqstr1 = msg.from_user.id if msg.from_user else 0
     reqstr = await client.get_users(reqstr1)
+
     if not spoll:
         message = msg
         settings = await get_settings(message.chat.id)
-        if message.text.startswith("/"): return  # ignore commands
-        if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
+
+        if message.text.startswith("/"): 
+            return  # ignore commands
+
+        if re.findall(r"((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
+
         if len(message.text) < 100:
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
+
             if not files:
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
-                    await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)))
+                    await client.send_message(
+                        chat_id=LOG_CHANNEL,
+                        text=script.NORSLTS.format(reqstr.id, reqstr.mention, search),
+                    )
                     return
         else:
             return
@@ -805,7 +814,9 @@ async def auto_filter(client, msg, spoll=False):
         settings = await get_settings(msg.message.chat.id)
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
+
     pre = 'filep' if settings['file_secure'] else 'file'
+
     if settings["button"]:
         btn = [
             [
@@ -829,32 +840,31 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    btn.insert(0, 
-        [
-            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
-        ]
-    )
-    btn.insert(1, 
-         [     
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo')
-         ]
-    )
+
+    btn.insert(0, [
+        InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+    ])
+    btn.insert(1, [
+        InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
+        InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo')
+    ])
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
-        btn.append(
-            [InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="Nᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{offset}")]
-        )
+        btn.append([
+            InlineKeyboardButton(text=f"🗓 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
+            InlineKeyboardButton(text="Nᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{offset}")
+        ])
     else:
-        btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
-        )
+        btn.append([
+            InlineKeyboardButton(text="🗓 1/1", callback_data="pages")
+        ])
+
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
+
     if imdb:
         cap = TEMPLATE.format(
             query=search,
@@ -888,11 +898,17 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
-if imdb and imdb.get('poster'):
+        cap = (
+            f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ "
+            f"Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
+        )
+
+    if imdb and imdb.get('poster'):
         try:
-            pic_fi=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
-                                      reply_markup=InlineKeyboardMarkup(btn))
+            pic_fi = await message.reply_photo(
+                photo=imdb.get('poster'), caption=cap[:1024],
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
             if settings["auto_delete"]:
                 await asyncio.sleep(600)
                 await pic_fi.delete()
@@ -900,26 +916,37 @@ if imdb and imdb.get('poster'):
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            pic_fil=await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            pic_fil = await message.reply_photo(
+                photo=poster, caption=cap[:1024],
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
             if settings["auto_delete"]:
                 await asyncio.sleep(600)
                 await pic_fil.delete()
                 await message.delete()
         except Exception as e:
             logger.exception(e)
-            no_pic=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            no_pic = await message.reply_photo(
+                photo=NOR_IMG, caption=cap,
+                reply_markup=InlineKeyboardMarkup(btn)
+            )
             if settings["auto_delete"]:
                 await asyncio.sleep(600)
                 await no_pic.delete()
                 await message.delete()
     else:
-        no_fil=await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn)
+        no_fil = await message.reply_photo(
+            photo=NOR_IMG, caption=cap,
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
         if settings["auto_delete"]:
             await asyncio.sleep(600)
             await no_fil.delete()
             await message.delete()
+
     if spoll:
         await msg.message.delete()
+
 
 
 async def advantage_spell_chok(client, msg):
