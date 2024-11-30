@@ -49,7 +49,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/8619a6f258621134b7576.jpg https://telegra.ph/file/d8daf35960bbb4a7f8558.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "")
+NOR_IMG = environ.get('NOR_IMG', "https://imgur.com/a/I7Mvinv")
 SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/80dcffebb47e116a65758.jpg")
 
 # Welcome area
@@ -81,7 +81,7 @@ MONGO_URL = os.environ.get('MONGO_URL', "")
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 PORT = os.environ.get("PORT", "8080")
-MAX_BTN = int(environ.get('MAX_BTN', "7"))
+MAX_BTN = int(environ.get('MAX_BTN', "6"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/wudixh1")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/wudixh14")
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/wudixh2")
