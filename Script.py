@@ -2,8 +2,8 @@ class script(object):
     START_TXT = """<blockquote><b>𝙷𝙴𝙻𝙾 {},
 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈</b></blockquote>"""
     
-    HELP_TXT = """<b>𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
+    HELP_TXT = """<blockquote><b>𝙷𝙴𝚈 {}
+𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b></blockquote>"""
 
 
 # ⚠️ Please don't change our source code 👇🏻
@@ -21,7 +21,7 @@ class script(object):
 This is Evamaria Re-edited Repo ✅</blockquote>
     """
 
-    MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
+    MANUELFILTER_TXT = """<blockquote>ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
 <b>ɴᴏᴛᴇ:</b>
 1. ᴛʜɪꜱ ʙᴏᴛ ꜱʜᴏᴜʟᴅ ʜᴀᴠᴇ ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟᴇɢᴇ.
@@ -31,9 +31,9 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /filter - <code>ᴀᴅᴅ ᴀ ꜰɪʟᴛᴇʀ ɪɴ ᴀ ᴄʜᴀᴛ</code>
 • /filters - <code>ʟɪꜱᴛ ᴀʟʟ ᴛʜᴇ ꜰɪʟᴛᴇʀꜱ ᴏꜰ ᴀ ᴄʜᴀᴛ</code>
 • /del - <code>ᴅᴇʟᴇᴛᴇ ᴀ ꜱᴘᴇᴄɪꜰɪᴄ ꜰɪʟᴛᴇʀ ɪɴ ᴀ ᴄʜᴀᴛ</code>
-• /delall - <code>ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴀ ᴄʜᴀᴛ (ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴏɴʟʏ)</code>"""
+• /delall - <code>ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴡʜᴏʟᴇ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴀ ᴄʜᴀᴛ (ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴏɴʟʏ)</code></blockquote>"""
 
-    BUTTON_TXT = """ʜᴇʟᴘ: <b>ʙᴜᴛᴛᴏɴꜱ</b>
+    BUTTON_TXT = """<blockquote>ʜᴇʟᴘ: <b>ʙᴜᴛᴛᴏɴꜱ</b>
 - ᴛʜɪꜱ ʙᴏᴛ ꜱᴜᴘᴘᴏʀᴛꜱ ʙᴏᴛʜ ᴜʀʟ ᴀɴᴅ ᴀʟᴇʀᴛ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ.
 <b>ɴᴏᴛᴇ:</b>
 1. ᴛᴇʟᴇɢʀᴀᴍ ᴡɪʟʟ ɴᴏᴛ ᴀʟʟᴏᴡꜱ ʏᴏᴜ ᴛᴏ ꜱᴇɴᴅ ʙᴜᴛᴛᴏɴꜱ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴄᴏɴᴛᴇɴᴛ, ꜱᴏ ᴄᴏɴᴛᴇɴᴛ ɪꜱ ᴍᴀɴᴅᴀᴛᴏʀʏ.
@@ -42,9 +42,9 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 <b>ᴜʀʟ ʙᴜᴛᴛᴏɴꜱ:</b>
 <code>[Button Text](buttonurl:https://t.me/DQ_The_File_Donor_Updates)</code>
 <b>ᴀʟᴇʀᴛ ʙᴜᴛᴛᴏɴꜱ:</b>
-<code>[Button Text](buttonalert:ᴛʜɪꜱ ɪꜱ ᴀɴ ᴀʟᴇʀᴛ ᴍᴇꜱꜱᴀɢᴇ)</code>"""
+<code>[Button Text](buttonalert:ᴛʜɪꜱ ɪꜱ ᴀɴ ᴀʟᴇʀᴛ ᴍᴇꜱꜱᴀɢᴇ)</code></blockquote>"""
     
-    AUTOFILTER_TXT ="""Help: <b>Auto Filter</b>
+    AUTOFILTER_TXT ="""<blockquote>Help: <b>Auto Filter</b>
 
 <b>NOTE:</b>
 
@@ -56,9 +56,9 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 <b>★ /set_template - 𝚂𝙴𝚃 𝙲𝚄𝚂𝚃𝙾𝙼 𝙸𝙼𝙳𝙱 𝚃𝙴𝙼𝙿𝙻𝙰𝚃𝙴 𝙵𝙾𝚁 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁.</b>
 <b>★ /get_template - 𝙶𝙴𝚃 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙸𝙼𝙳𝙱 𝚃𝙴𝙼𝙿𝙻𝙰𝚃𝙴 𝙾𝙵 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁.</b>
 <b>★ /autofilter on - 𝙴𝙽𝙰𝙱𝙻𝙴 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 𝙸𝙽 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿𝚂.</b>
-<b>★ /autofilter off - 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 𝙸𝙽 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿𝚂.</b>"""
+<b>★ /autofilter off - 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳 𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁 𝙸𝙽 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿𝚂.</b></blockquote>"""
 
-    CONNECTION_TXT = """Help: <b>Connections</b>
+    CONNECTION_TXT = """<blockquote>Help: <b>Connections</b>
 
 - Used to connect bot to PM for managing filters 
 - it helps to avoid spamming in groups.
@@ -70,9 +70,9 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 <b>Commands and Usage:</b>
 • /connect  - <code>connect a particular chat to your PM</code>
 • /disconnect  - <code>disconnect from a chat</code>
-• /connections - <code>list all your connections</code>"""
+• /connections - <code>list all your connections</code></blockquote>"""
 
-    EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
+    EXTRAMOD_TXT = """<blockquote>Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
 these are the extra features of Elsa
@@ -81,7 +81,7 @@ these are the extra features of Elsa
 • /id - <code>get id of a specified user.</code>
 • /info  - <code>get information about a user.</code>
 • /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
+• /search  - <code>get the film information from various sources.</code></blockquote>"""
 
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
@@ -161,11 +161,12 @@ Name - {}
 """
 
     CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}
+💿FileSize : {file_size}
 
-╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
+<blockquote>╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
 ▫️<a href=https://t.me/wudixh> ᴍᴏᴠɪᴇ ʜᴜʙ </a>
-▫️<a href=https://t.me/wudixh13> Kuttu Bot Update </a>
-╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</b>""" 
+▫️<a href=https://t.me/wudixh14> Kuttu Bot Update </a>
+╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</blockquote></b>""" 
 
     RESTART_TXT = """
     Kuttu Bot 2 ✅
@@ -220,18 +221,5 @@ Name - {}
     
     
     LOGO = """
-    
-                  
-██╗░░██╗██╗░░░██╗████████╗████████╗██╗░░░██╗██████╗░░█████╗░████████╗
-██║░██╔╝██║░░░██║╚══██╔══╝╚══██╔══╝██║░░░██║██╔══██╗██╔══██╗╚══██╔══╝
-█████═╝░██║░░░██║░░░██║░░░░░░██║░░░██║░░░██║██████╦╝██║░░██║░░░██║░░░
-██╔═██╗░██║░░░██║░░░██║░░░░░░██║░░░██║░░░██║██╔══██╗██║░░██║░░░██║░░░
-██║░╚██╗╚██████╔╝░░░██║░░░░░░██║░░░╚██████╔╝██████╦╝╚█████╔╝░░░██║░░░
-╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░░░╚═╝░░░░╚═════╝░╚═════╝░░╚════╝░░░░╚═╝░░░
-
-
-
-
-▒█▀▄▀█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀ 　 ▒█▀▀█ ▒█░░▒█ 　 ▒█▀▀█ ▒█▀▀▀█ ▒█░▒█ ▀▀█▀▀ ▒█░▒█ ░█▀▀█ ▒█▀▄▀█ 　 ▒█▀▀▀█ 　 ▒█▀▀▀ 　 ▒█▀▀█ 
-▒█▒█▒█ ▒█▄▄█ ▒█░▒█ ▒█▀▀▀ 　 ▒█▀▀▄ ▒█▄▄▄█ 　 ▒█░▄▄ ▒█░░▒█ ▒█░▒█ ░▒█░░ ▒█▀▀█ ▒█▄▄█ ▒█▒█▒█ 　 ░▀▀▀▄▄ 　 ▒█▀▀▀ 　 ▒█▄▄▀ 
-▒█░░▒█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄ 　 ▒█▄▄█ ░░▒█░░ 　 ▒█▄▄█ ▒█▄▄▄█ ░▀▄▄▀ ░▒█░░ ▒█░▒█ ▒█░▒█ ▒█░░▒█ 　 ▒█▄▄▄█ 　 ▒█▄▄▄ 　 ▒█░▒█"""
+✅✅✅ Goutham Josh ✅✅✅
+Recoded By Above Person 💞"""
