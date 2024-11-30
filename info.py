@@ -48,8 +48,8 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/d8b82d0a1d20da5f0cf65.jpg https://telegra.ph/file/ac56302ae11da42519c1d.jpg https://telegra.ph/file/43c7e4d3c2e327bd9b02e.jpg https://telegra.ph/file/77283bdd7509ba368a43f.jpg https://telegra.ph/file/1157e9c4f1ab715996334.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/c53e593b9c913cd73a824.jpg")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/8619a6f258621134b7576.jpg https://telegra.ph/file/d8daf35960bbb4a7f8558.jpg')).split()
+NOR_IMG = environ.get('NOR_IMG', "")
 SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/80dcffebb47e116a65758.jpg")
 
 # Welcome area
@@ -81,14 +81,14 @@ MONGO_URL = os.environ.get('MONGO_URL', "")
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 PORT = os.environ.get("PORT", "8080")
-MAX_BTN = int(environ.get('MAX_BTN', "8"))
+MAX_BTN = int(environ.get('MAX_BTN', "7"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/wudixh1")
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/wudixh")
+MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/wudixh14")
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/wudixh2")
-MSG_ALRT = environ.get('MSG_ALRT', '𝙺𝚞𝚝𝚝𝚞 𝙱𝚘𝚝 ❣️')
+MSG_ALRT = environ.get('MSG_ALRT', ' Hey How Are U 💞')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'wudixh1')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'wudixh14')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
