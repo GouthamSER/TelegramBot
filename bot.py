@@ -20,6 +20,14 @@ from Script import script
 from aiohttp import web
 from plugins import web_server
 
+# peer id invaild fixxx
+from pyrogram import utils as pyroutils
+pyroutils.MIN_CHAT_ID = -999999999999
+pyroutils.MIN_CHANNEL_ID = -100999999999999
+
+# for prevent stoping the bot after 1 week
+logging.getLogger("asyncio").setLevel(logging.CRITICAL -1)
+
 class Bot(Client):
 
     def __init__(self):
@@ -47,6 +55,7 @@ class Bot(Client):
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         logging.info(LOG_STR)
         logging.info(script.LOGO)
+        print("Heheh Funzzzzz only😀")
         
         app = web.AppRunner(await web_server())
         await app.setup()
