@@ -83,7 +83,7 @@ these are the extra features of Elsa
 • /imdb  - <code>get the film information from IMDb source.</code>
 • /search  - <code>get the film information from various sources.</code></blockquote>"""
 
-    ADMIN_TXT = """Help: <b>Admin mods</b>
+    ADMIN_TXT = """<blockquote>Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
 This module only works for my admins
@@ -102,7 +102,7 @@ This module only works for my admins
 • /broadcast - <code>to broadcast a message to all users</code>
 • /grp_broadcast - <code>to broadcast a message to all groups</code>
 • /gfilter - <code>group filter</code>
-• /setskip - <code>skip no of files before indexing</code>"""
+• /setskip - <code>skip no of files before indexing</code></blockquote>"""
     
     STATUS_TXT = """<blockquote><b>★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
 ★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
