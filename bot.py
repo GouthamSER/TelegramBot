@@ -12,13 +12,17 @@ from pyrogram import Client, __version__, filters
 from pyrogram.raw.all import layer
 from database.ia_filterdb import Media
 from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from Script import script
-from aiohttp import web
-from plugins import web_server
+
+from plugins.webcode import bot_run
+from os import environ
+from aiohttp import web as webserver
+
+PORT_CODE = environ.get("PORT", "8080")
 
 # peer id invaild fixxx
 from pyrogram import utils as pyroutils
@@ -57,10 +61,11 @@ class Bot(Client):
         logging.info(script.LOGO)
         print("Heheh Funzzzzz only😀")
         
-        app = web.AppRunner(await web_server())
-        await app.setup()
+        client = webserver.AppRunner(await bot_run())
+        await client.setup()
         bind_address = "0.0.0.0"
-        await web.TCPSite(app, bind_address, PORT).start()
+        await webserver.TCPSite(client, bind_address,
+        PORT_CODE).start()
 
     async def stop(self, *args):
         await super().stop()
