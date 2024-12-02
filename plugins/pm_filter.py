@@ -520,7 +520,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
             InlineKeyboardButton('Help 🔧', callback_data='help'),
             InlineKeyboardButton('About 🌪️', callback_data='about')
             ]]      
@@ -849,52 +848,33 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = (
-            f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ "
-            f"Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
-        )
-
+        cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ "
+            f"Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>")
     if imdb and imdb.get('poster'):
         try:
-            pic_fi = await message.reply_photo(
-                photo=imdb.get('poster'), caption=cap[:1024],
-                reply_markup=InlineKeyboardMarkup(btn)
-            )
-            if settings["auto_delete"]:
-                await asyncio.sleep(600)
-                await pic_fi.delete()
-                await message.delete()
+            delauto = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+                                      reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await delauto.delete() #del msg auto 10min filter
+            await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            pic_fil = await message.reply_photo(
-                photo=poster, caption=cap[:1024],
-                reply_markup=InlineKeyboardMarkup(btn)
-            )
-            if settings["auto_delete"]:
-                await asyncio.sleep(600)
-                await pic_fil.delete()
-                await message.delete()
+            delau = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await delau.delete()#del msg auto 10min filter
+            await message.delete()
         except Exception as e:
             logger.exception(e)
-            no_pic = await message.reply_text(
-                text=cap,
-                reply_markup=InlineKeyboardMarkup(btn)
-            )
-            if settings["auto_delete"]:
-                await asyncio.sleep(600)
-                await no_pic.delete()
-                await message.delete()
-    else:
-        no_fil = await message.reply_text(
-            text=cap,
-            reply_markup=InlineKeyboardMarkup(btn)
-        )
-        if settings["auto_delete"]:
-            await asyncio.sleep(600)
-            await no_fil.delete()
+            audel = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await audel.delete()#del msg auto 10min filter
             await message.delete()
-
+    else:
+        autodel = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(300)
+        await autodel.delete()#del msg auto 10min filter
+        await message.delete()
     if spoll:
         await msg.message.delete()
 
