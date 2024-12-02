@@ -42,21 +42,19 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Mᴏᴠɪᴇ ɢʀᴏᴜᴘ🎥', url='https://t.me/wudixh'),
-            InlineKeyboardButton('Oᴡɴᴇʀ👤', url='https://t.me/im_goutham_josh')
-            ],[      
-            InlineKeyboardButton('Hᴇʟᴘ🔧', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ🖥', callback_data='about')
+            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
+            InlineKeyboardButton('Help 🔧', callback_data='help'),
+            InlineKeyboardButton('About 🌪️', callback_data='about')
             ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIuc2OxMvp4oKa3eqg6zBTCZZdtxFV3AAIvAAPhAAEBGxa4Kik7WjyMHgQ") 
         await asyncio.sleep(1)
         await m.delete()        
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_text(
+            #photo=random.choice(PICS),
+            text=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -91,18 +89,16 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Mᴏᴠɪᴇ ɢʀᴏᴜᴘ🎥', url='https://t.me/wudixh'),
-            InlineKeyboardButton('Oᴡɴᴇʀ👤', url='https://t.me/im_goutham_josh')
-            ],[      
-            InlineKeyboardButton('Hᴇʟᴘ🔧', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ🖥', callback_data='about')
+            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
+            InlineKeyboardButton('Help 🔧', callback_data='help'),
+            InlineKeyboardButton('About 🌪️', callback_data='about')
             ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_text(
+            #photo=random.choice(PICS),
+            text=script.SUR_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
