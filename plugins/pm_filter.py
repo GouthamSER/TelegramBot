@@ -849,7 +849,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ "
-            f"Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>")
+            f"Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
     if imdb and imdb.get('poster'):
         try:
             delauto = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
