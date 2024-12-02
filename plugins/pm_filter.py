@@ -156,12 +156,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("That is not for you ❌\nPlease Search for you ✅"), show_alert=True)
+        return await query.answer("That is not for you ❌\nPlease Search for you ✅", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("Spell Error ❌\n Check Spelling with AI button 😂\n Delete in 10 sec ⏱️"), show_alert=True)#script change
+        return await query.answer("Spell Error ❌\n Check Spelling with AI button 😂\n Delete in 10 sec ⏱️", show_alert=True)#script change
         await asyncio.sleep(10)
         await movies.delete()
     movie = movies[(int(movie_))]
