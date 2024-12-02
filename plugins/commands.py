@@ -44,10 +44,9 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
             InlineKeyboardButton('Help 🔧', callback_data='help'),
             InlineKeyboardButton('About 🌪️', callback_data='about')
-            ]]         
+        ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIuc2OxMvp4oKa3eqg6zBTCZZdtxFV3AAIvAAPhAAEBGxa4Kik7WjyMHgQ") 
         await asyncio.sleep(1)
@@ -91,10 +90,9 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
             InlineKeyboardButton('Help 🔧', callback_data='help'),
             InlineKeyboardButton('About 🌪️', callback_data='about')
-            ]]         
+        ]]        
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
             #photo=random.choice(PICS),
