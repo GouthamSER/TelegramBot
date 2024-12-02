@@ -1,5 +1,3 @@
-# Kanged From @TroJanZheX
-# REDIRECT added https://github.com/Joelkb
 import asyncio
 import re
 import ast
@@ -9,8 +7,8 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, FILE_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, NOR_IMG, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, SPELL_IMG, MSG_ALRT, FILE_FORWARD, MAIN_CHANNEL, LOG_CHANNEL
+from info import ADMINS, AUTH_CHANNEL, FILE_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, MSG_ALRT, FILE_FORWARD, MAIN_CHANNEL, LOG_CHANNEL
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -116,8 +114,8 @@ async def next_page(bot, query):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo')
+             InlineKeyboardButton(f'🍿 Movie', 'minfo'),
+             InlineKeyboardButton(f'🎞️ Series', 'sinfo')
          ]
     )
 
@@ -158,12 +156,14 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("Search for Yourself🔎", show_alert=True)
+        return await query.answer("That is not for you ❌\nPlease Search for you ✅"), show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("Spell Error ❌\n check spell", show_alert=True)#script change
+        return await query.answer("Spell Error ❌\n Check Spelling with AI button 😂\n Delete in 10 sec ⏱️"), show_alert=True)#script change
+        await asyncio.sleep(10)
+        await movies.delete()
     movie = movies[(int(movie_))]
     await query.answer("Checking ✅")#script change
     k = await manual_filters(bot, query.message, text=movie)
@@ -415,7 +415,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔥 Cʜᴀɴɴᴇʟ 🔥", url=(MAIN_CHANNEL))
+                                InlineKeyboardButton("🔥 Channel 🔥", url=(MAIN_CHANNEL))
                             ]
                         ]
                     )
@@ -445,7 +445,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 😒\nPᴏᴡᴇʀᴅᴇᴅ BY ᴋᴜᴛᴛᴜ ʙᴏᴛ™t", show_alert=True)
+            await query.answer("𝑰 𝑳𝒊𝒌𝒆 𝒀𝒐𝒖𝒓 𝑺𝒎𝒂𝒓𝒕𝒏𝒆𝒔𝒔, 𝑩𝒖𝒕 𝑫𝒐𝒏'𝒕 𝑩𝒆 𝑶𝒗𝒆𝒓𝒔𝒎𝒂𝒓𝒕 🫠"), show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -518,13 +518,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ💕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Mᴏᴠɪᴇ ɢʀᴏᴜᴘ🎥', url='https://t.me/wudixh'),
-            InlineKeyboardButton('Oᴡɴᴇʀ👤', url='https://t.me/im_goutham_josh')
-            ],[      
-            InlineKeyboardButton('Hᴇʟᴘ🔧', callback_data='help'),
-            InlineKeyboardButton('Aʙᴏᴜᴛ🖥', callback_data='about')
+            InlineKeyboardButton('Movie Request 🎉', url='https://t.me/wudixh'),
+            InlineKeyboardButton('Help 🔧', callback_data='help'),
+            InlineKeyboardButton('About 🌪️', callback_data='about')
             ]]      
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -551,11 +549,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⛳sᴛᴀᴛᴜs', callback_data='stats'),
-            InlineKeyboardButton('🎪sᴏᴜʀᴄᴇ', callback_data='source')
+            InlineKeyboardButton('⛳ Status', callback_data='stats'),
+            InlineKeyboardButton('🎪 Source', callback_data='source')
         ], [
-            InlineKeyboardButton('🏡ʜᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('🔐ᴄʟᴏsᴇ', callback_data='close_data')
+            InlineKeyboardButton('🏡 Home', callback_data='start'),
+            InlineKeyboardButton('🔐 Close', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -565,8 +563,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='about'),
-            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com')
+            InlineKeyboardButton('◀️ Back', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -638,8 +635,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start'),
-            InlineKeyboardButton('ʀᴇғʀᴇsʜ🔃', callback_data='rfrsh')
+            InlineKeyboardButton('◀️ Back', callback_data='start'),
+            InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -655,10 +652,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "rfrsh":
-        await query.answer("𝙁𝙚𝙩𝙘𝙝𝙞𝙣𝙜 𝙈𝙤𝙣𝙜𝙤𝘿𝙗 𝘿𝙖𝙩𝙖𝘽𝙖𝙨𝙚")
+        await query.answer("𝙁𝙚𝙩𝙘𝙝𝙞𝙣𝙜 𝙈𝙤𝙣𝙜𝙤𝘿𝙗 𝘿𝙖𝙩𝙖𝘽𝙖𝙨𝙚.....")
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ👈', callback_data='start'),
-            InlineKeyboardButton('ʀᴇғʀᴇsʜ🔃', callback_data='rfrsh')
+            InlineKeyboardButton('◀️ Back', callback_data='start'),
+            InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -799,8 +796,8 @@ async def auto_filter(client, msg, spoll=False):
         InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
     ])
     btn.insert(1, [
-        InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-        InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo')
+        InlineKeyboardButton(f'🍿 Movie', 'minfo'),
+        InlineKeyboardButton(f'🎞️ Series', 'sinfo')
     ])
 
     if offset != "":
@@ -880,8 +877,8 @@ async def auto_filter(client, msg, spoll=False):
                 await message.delete()
         except Exception as e:
             logger.exception(e)
-            no_pic = await message.reply_photo(
-                photo=NOR_IMG, caption=cap,
+            no_pic = await message.reply_text(
+                text=cap,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             if settings["auto_delete"]:
@@ -889,8 +886,8 @@ async def auto_filter(client, msg, spoll=False):
                 await no_pic.delete()
                 await message.delete()
     else:
-        no_fil = await message.reply_photo(
-            photo=NOR_IMG, caption=cap,
+        no_fil = await message.reply_text(
+            text=cap,
             reply_markup=InlineKeyboardMarkup(btn)
         )
         if settings["auto_delete"]:
@@ -918,7 +915,7 @@ async def advantage_spell_chok(client, msg):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-                 InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
+                 InlineKeyboardButton('🔍 Search 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
              ]]
         
         k = await msg.reply_text(
@@ -933,7 +930,7 @@ async def advantage_spell_chok(client, msg):
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-                 InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
+                 InlineKeyboardButton('🔍 Search 🔎', url=f"https://www.google.com/search?q={reqst_gle}")
              ]]
         
         k = await msg.reply_text(
