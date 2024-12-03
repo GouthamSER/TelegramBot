@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('Updates 🫶', url=(MAIN_CHANNEL))
+                InlineKeyboardButton('updαtєѕ 🫶', url=(MAIN_CHANNEL))
             ],
             [
-                InlineKeyboardButton('Help 💫', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('hєlp 💫', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -42,14 +42,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('αdd mє tσ grσup +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Help 🔧', callback_data='help'),
-            InlineKeyboardButton('About 🌪️', callback_data='about')
+            InlineKeyboardButton('hєlp', callback_data='help'),
+            InlineKeyboardButton('αвσut', callback_data='about')
+            ],[
+            InlineKeyboardButton('mσvíє rєq 🎬', url = "https://t.me/wudixh"),
+            InlineKeyboardButton('σwnєr', url='https://t.me/im_goutham_josh')
         ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgUAAxkBAAIuc2OxMvp4oKa3eqg6zBTCZZdtxFV3AAIvAAPhAAEBGxa4Kik7WjyMHgQ") 
-        await asyncio.sleep(1)
+        await asyncio.sleep(1.5)
         await m.delete()        
         await message.reply_text(
             #photo=random.choice(PICS),
@@ -67,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ💥", url=invite_link.invite_link
+                    "jσín updαtє chαnnєl💥", url=invite_link.invite_link
                 )
             ]
         ]
@@ -76,22 +79,25 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 trч αgαín", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 trч αgαín", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs Bᴏᴛ!**",
+            text="**jσín thє updαtє chαnnєl fσr uѕє вσt !**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('Add me to your grp ☠️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('αdd mє tσ grσup +', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Help 🔧', callback_data='help'),
-            InlineKeyboardButton('About 🌪️', callback_data='about')
+            InlineKeyboardButton('hєlp', callback_data='help'),
+            InlineKeyboardButton('αвσut', callback_data='about')
+            ],[
+            InlineKeyboardButton('mσvíє rєq 🎬', url = "https://t.me/wudixh"),
+            InlineKeyboardButton('σwnєr', url='https://t.me/im_goutham_josh')
         ]]        
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -241,7 +247,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('❤️‍🔥 Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ❤️‍🔥', url=(MAIN_CHANNEL)) ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Movie Request 🎬', url = "https://t.me/wudixh") ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
@@ -489,51 +495,6 @@ async def settings(client, message):
             parse_mode=enums.ParseMode.HTML,
             reply_to_message_id=message.id
         )
-
-
-
-@Client.on_message(filters.command('set_template'))
-async def save_template(client, message):
-    sts = await message.reply("Checking template")
-    userid = message.from_user.id if message.from_user else None
-    if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
-    chat_type = message.chat.type
-
-    if chat_type == enums.ChatType.PRIVATE:
-        grpid = await active_connection(str(userid))
-        if grpid is not None:
-            grp_id = grpid
-            try:
-                chat = await client.get_chat(grpid)
-                title = chat.title
-            except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
-                return
-        else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
-            return
-
-    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        grp_id = message.chat.id
-        title = message.chat.title
-
-    else:
-        return
-
-    st = await client.get_chat_member(grp_id, userid)
-    if (
-            st.status != enums.ChatMemberStatus.ADMINISTRATOR
-            and st.status != enums.ChatMemberStatus.OWNER
-            and str(userid) not in ADMINS
-    ):
-        return
-
-    if len(message.command) < 2:
-        return await sts.edit("No Input!!")
-    template = message.text.split(" ", 1)[1]
-    await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
 
 @Client.on_message(filters.command("deletefiles") & filters.user(ADMINS))
 async def deletemultiplefiles(bot, message):
