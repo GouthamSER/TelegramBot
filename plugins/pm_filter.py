@@ -831,7 +831,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Settings Changed 👍')
+    await query.answer('Piracy is a CriME')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -939,7 +939,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = script.RESULT_TXT.format(search) #result for group
+        cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>") #result for group
     if imdb and imdb.get('poster'):
         try:
             delauto = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
