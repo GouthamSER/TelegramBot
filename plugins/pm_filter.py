@@ -186,27 +186,6 @@ async def language_check(bot, query):
                 for file in files
             ]
 
-        # Info/Category buttons
-        try:
-            if settings['auto_delete']:
-                btn.insert(0, [
-                    InlineKeyboardButton('ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton('ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton('ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ])
-            else:
-                btn.insert(0, [
-                    InlineKeyboardButton('ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton('ꜱᴇʀɪᴇꜱ', 'sinfo')
-                ])
-        except KeyError:
-            await save_group_settings(query.message.chat.id, 'auto_delete', True)
-            btn.insert(0, [
-                InlineKeyboardButton('ɪɴꜰᴏ', 'reqinfo'),
-                InlineKeyboardButton('ᴍᴏᴠɪᴇ', 'minfo'),
-                InlineKeyboardButton('ꜱᴇʀɪᴇꜱ', 'sinfo')
-            ])
-
         # Language / Send All / PM link buttons
         btn.insert(0, [
             InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}"),
