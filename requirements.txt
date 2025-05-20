@@ -10,3 +10,4 @@ git+https://github.com/GouthamSER/cinemagoer
 aiohttp==3.7.4
 datetime
 pytz
+psutil
