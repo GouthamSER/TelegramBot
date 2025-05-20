@@ -8,7 +8,7 @@ from info import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, humanbytes
+from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, humanbytes, send_all
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results
 from database.filters_mdb import (
@@ -551,6 +551,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "pages":
         await query.answer()
+
+    elif query.data.startswith("send_fall"):
+        temp_var, ident, offset, userid = query.data.split("#")
+        if int(userid) not in [query.from_user.id, 0]:
+            return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+        files = temp.SEND_ALL_TEMP.get(query.from_user.id)
+        is_over = await send_all(client, query.from_user.id, files, ident)
+        if is_over == 'done':
+            return await query.answer(f"Hᴇʏ {query.from_user.first_name}, Aʟʟ ғɪʟᴇs ᴏɴ ᴛʜɪs ᴘᴀɢᴇ ʜᴀs ʙᴇᴇɴ sᴇɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ᴛᴏ ʏᴏᴜʀ PM !", show_alert=True)
+        elif is_over == 'fsub':
+            return await query.answer("Hᴇʏ, Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ɪɴ ᴍʏ ʙᴀᴄᴋ ᴜᴘ ᴄʜᴀɴɴᴇʟ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴊᴏɪɴ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+        elif is_over == 'verify':
+            return await query.answer("Hᴇʏ, Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ. Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ. Cʜᴇᴄᴋ ᴍʏ PM ᴛᴏ ᴠᴇʀɪғʏ ᴀɴᴅ ɢᴇᴛ ғɪʟᴇs !", show_alert=True)
+        else:
+            return await query.answer(f"Eʀʀᴏʀ: {is_over}", show_alert=True)
 #ALERT FN IN SPELL CHECK FOR LANGAUGES TO KNOW HOW TO TYPE MOVIES esp english spell check goto adv spell check to check donot change the codes      
     elif query.data == "esp":
         await query.answer(text=script.ENG_SPELL, show_alert="true")
